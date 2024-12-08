@@ -26,7 +26,7 @@ The main goal is to incorporate feature engineering techniques like feature impo
 - `README.md`: Project overview and instructions.
 - `requirements.txt`: Lists the required Python libraries for the project.
 
-### Data Description
+## Data Description
 The dataset (`./data/airfoil_self_noise.dat`) used for this project is the Airfoil Self-Noise Data set which contains the following columns:
 
 - **Frequency**: Frequency of the sound.
@@ -46,9 +46,9 @@ The dataset (`./data/airfoil_self_noise.dat`) used for this project is the Airfo
 | scaled-sound-pressure                  | Target  | Continuous  |             | dB    | no             |
 
 
-#### Running the Scripts
+## Running the Scripts
 
-##### 1. Dependencies(`requirements.txt`)
+#### 1. Dependencies(`requirements.txt`)
 
 Ensure all dependencies are installed in your Python virtual environment by running:
 
@@ -56,11 +56,11 @@ Ensure all dependencies are installed in your Python virtual environment by runn
 pip install -r requirements.txt
 ```
 
-##### 2. Exploratory Data Analysis (`main_analysis.ipynb`)
+#### 2. Exploratory Data Analysis (`main_analysis.ipynb`)
 
 The Jupyter notebook provides visualizations and basic statistics of the dataset. Run it in a Jupyter environment to explore the distribution of features and relationships between them.
 
-##### 3. Training the Model (`train_model.py`)
+#### 3. Training the Model (`train_model.py`)
 
 To train the model, run the following command:
 
@@ -69,7 +69,7 @@ python scripts/train_model.py
 ```
 This script loads the data, performs feature selection, trains the `RandomForestRegressor`, saves the trained model, and outputs the feature importance ranking and MSE.
 
-##### 4. Making Predictions (`predict.py`)
+#### 4. Making Predictions (`predict.py`)
 
 To use the trained model for making predictions, run:
 ```bash
