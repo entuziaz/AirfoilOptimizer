@@ -27,7 +27,7 @@ The main goal is to incorporate feature engineering techniques like feature impo
 - `requirements.txt`: Lists the required Python libraries for the project.
 
 ### Data Description
-The dataset used for this project is the Airfoil Self-Noise Data set, which contains the following columns:
+The dataset (`./data/airfoil_self_noise.dat`) used for this project is the Airfoil Self-Noise Data set which contains the following columns:
 
 - **Frequency**: Frequency of the sound.
 - **Angle of Attack**: Angle of attack of the airfoil.
@@ -35,6 +35,15 @@ The dataset used for this project is the Airfoil Self-Noise Data set, which cont
 - **Free-stream Velocity**: Velocity of the air stream.
 - **Suction Side Displacement**: Measurement related to the displacement on the suction side.
 - **Sound Pressure Level (SPL)**: The target variable (dependent variable) representing the sound pressure level.
+
+| Variable Name                          | Role    | Type        | Description | Units | Missing Values |
+|----------------------------------------|---------|-------------|-------------|-------|----------------|
+| frequency                              | Feature | Integer     |             | Hz    | no             |
+| attack-angle                           | Feature | Binary      |             | deg   | no             |
+| chord-length                           | Feature | Continuous  |             | m     | no             |
+| free-stream-velocity                   | Feature | Continuous  |             | m/s   | no             |
+| suction-side-displacement-thickness     | Feature | Continuous  |             | m     | no             |
+| scaled-sound-pressure                  | Target  | Continuous  |             | dB    | no             |
 
 
 #### Running the Scripts
@@ -67,5 +76,5 @@ To use the trained model for making predictions, run:
 python scripts/predict.py
 ```
 
-This script loads the trained model from the `../models/trained_model.pkl`, accepts new input data, and prints the predicted SPL.
+This script loads the trained model from the `./models/trained_model.pkl`, accepts new input data, and prints the predicted SPL.
 
