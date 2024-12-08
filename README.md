@@ -27,7 +27,7 @@ The main goal is to incorporate feature engineering techniques like feature impo
 - `requirements.txt`: Lists the required Python libraries for the project.
 
 ## Data Description
-The dataset (`./data/airfoil_self_noise.dat`) used for this project is the Airfoil Self-Noise Data set which contains the following columns:
+The dataset ([`./data/airfoil_self_noise.dat`](./data/airfoil_self_noise.dat)) used for this project is the Airfoil Self-Noise Data set which contains the following columns:
 
 - **Frequency**: Frequency of the sound.
 - **Angle of Attack**: Angle of attack of the airfoil.
@@ -76,5 +76,5 @@ To use the trained model for making predictions, run:
 python scripts/predict.py
 ```
 
-This script loads the trained model from the `./models/trained_model.pkl`, accepts new input data, and prints the predicted SPL.
+This script loads the trained model from the [`./models/trained_model.pkl`](./models/trained_model.pkl), accepts new input data, and prints the predicted SPL.
 
