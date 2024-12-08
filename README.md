@@ -1,7 +1,7 @@
 # AirfoilOptimizer: Self-Noise Prediction
 
 ## Project Overview
-This project aims to predict the sound pressure level of airfoil self-noise using machine learning models. The dataset used for this project, stored in [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) sourced from aerodynamic studies, consists of key features related to airfoil characteristics, such as frequency, angle of attack, chord length, and suction side displacement. 
+This project aims to predict the sound pressure level of an airplane airfoil self-noise using machine learning models. The dataset used for this project, stored in [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) sourced from aerodynamic studies on NACA 0012 airfoil, consists of key features related to airfoil characteristics, such as frequency, angle of attack, chord length, and suction side displacement. 
 
 The main goal is to incorporate feature engineering techniques like feature importance and apply various machine learning models specifically the following models for regression analysis:
 - Linear Regression 
@@ -27,7 +27,7 @@ The main goal is to incorporate feature engineering techniques like feature impo
 - `requirements.txt`: Lists the required Python libraries for the project.
 
 ## Data Description
-The dataset ([`./data/airfoil_self_noise.dat`](./data/airfoil_self_noise.dat)) used for this project is the Airfoil Self-Noise Data set which contains the following columns:
+The dataset ([`./data/airfoil_self_noise.dat`](./data/airfoil_self_noise.dat)) used for this project features the NACA 0012 airfoil tested under various wind tunnel speeds and angles of attack. Notably, the airfoil span and observer position remained consistent across all experiments. It contains the following columns:
 
 - **Frequency**: Frequency of the sound.
 - **Angle of Attack**: Angle of attack of the airfoil.
@@ -48,7 +48,7 @@ The dataset ([`./data/airfoil_self_noise.dat`](./data/airfoil_self_noise.dat)) u
 
 ## Running the Scripts
 
-#### 1. Dependencies(`requirements.txt`)
+#### 1. Dependencies([`requirements.txt`](/requirements.txt))
 
 Ensure all dependencies are installed in your Python virtual environment by running:
 
@@ -56,11 +56,11 @@ Ensure all dependencies are installed in your Python virtual environment by runn
 pip install -r requirements.txt
 ```
 
-#### 2. Exploratory Data Analysis (`main_analysis.ipynb`)
+#### 2. Exploratory Data Analysis ([`main_analysis.ipynb`](./notebooks/main_analysis.ipynb))
 
 The Jupyter notebook provides visualizations and basic statistics of the dataset. Run it in a Jupyter environment to explore the distribution of features and relationships between them.
 
-#### 3. Training the Model (`train_model.py`)
+#### 3. Training the Model ([`train_model.py`](./scripts/train_model.py))
 
 To train the model, run the following command:
 
@@ -69,7 +69,7 @@ python scripts/train_model.py
 ```
 This script loads the data, performs feature selection, trains the `RandomForestRegressor`, saves the trained model, and outputs the feature importance ranking and MSE.
 
-#### 4. Making Predictions (`predict.py`)
+#### 4. Making Predictions ([`predict.py`](./scripts/predict.py))
 
 To use the trained model for making predictions, run:
 ```bash
