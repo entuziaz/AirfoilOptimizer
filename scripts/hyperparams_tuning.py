@@ -56,9 +56,14 @@ grid_search = GridSearchCV(
 grid_search.fit(X_train_selected, y_train)
 
 
+# train linear regression model with selected features
+# model = LinearRegression()
+# model.fit(X_train_selected, y_train)
+
+
 # saving the best model
 base_model = grid_search.best_estimator_
-with open('../models/trained_model.pkl', 'wb') as f:
+with open('../models/hyperparams_tuned_model.pkl', 'wb') as f:
     pickle.dump(base_model, f)
 
 
