@@ -1,0 +1,4 @@
+Model,MSE,Best Parameters,Best Cross-validated MSE,Model Path
+Random Forest,4.325324148216083,"{'max_depth': 20, 'n_estimators': 200}",4.493289810635183,../models/random_forest_model.pkl
+Decision Tree,7.294923272425249,"{'max_depth': None, 'min_samples_split': 2}",8.24729404960581,../models/decision_tree_model.pkl
+LinearRegression,26.470049185948113,Default parameters,N/A,../models/linearregression_model.pkl

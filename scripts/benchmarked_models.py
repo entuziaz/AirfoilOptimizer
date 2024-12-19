@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.svm import SVR
+# from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error
 import pickle
 import os
@@ -56,7 +56,7 @@ models = {
     'LinearRegression': LinearRegression(),
     'Random Forest': RandomForestRegressor(random_state=42),
     'Decision Tree': DecisionTreeRegressor(random_state=42),
-    'SVM': SVR()
+    # 'SVM': SVR()
 }
 
 # Parameter grids for tuning
@@ -70,10 +70,10 @@ param_grids = {
         'max_depth': [None, 10, 20],
         'min_samples_split': [2, 5, 10]
     },
-    'SVM': {
-        'C': [0.1, 1, 10],
-        'kernel': ['linear', 'rbf']
-    }
+    # 'SVM': {
+    #     'C': [0.1, 1, 10],
+    #     'kernel': ['linear', 'rbf']
+    # }
 }
 
 
