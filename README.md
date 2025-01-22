@@ -3,9 +3,14 @@
 ## Project Overview
 This project aims to predict the sound pressure level of an airplane airfoil self-noise using machine learning models. The dataset used for this project, stored in [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) sourced from aerodynamic studies on NACA 0012 airfoil, consists of key features related to airfoil characteristics, such as frequency, angle of attack, chord length, and suction side displacement. 
 
-The main goal is to incorporate feature engineering techniques like feature importance and apply various machine learning models specifically the following models for regression analysis:
+The main goal is to incorporate feature engineering techniques like feature importance and apply various machine learning models specifically the following models:
 - Linear Regression 
 - Random Forest Regressor
+- Decision Tree Regressor
+
+**You can read the explainer articles on Medium:**
+1. [AirfoilOptimizer: Predicting Airfoil Self-Noise with Machine Learning (Part 1)](https://entuziaz.medium.com/airfoiloptimizer-predicting-airfoil-self-noise-with-machine-learning-6b7aabb7594e)
+2. [Airfoil Optimizer: Hyperparameter Tuning and Benchmarking (Part 2)](https://entuziaz.medium.com/airfoil-optimizer-hyperparameter-tuning-and-benchmarking-part-2-28c1e5566b65)
 
 ## Features and Methodology
 - **Data Preprocessing**: The data is read from a `.dat` file, and prepared for analysis, including defining features and the target variable. The dataset is loaded using `pandas` and split into training and testing sets using `train_test_split`.
@@ -16,6 +21,11 @@ The main goal is to incorporate feature engineering techniques like feature impo
   - **Linear Regression**: Initially, a LinearRegresion model was used to observe performance.
   - **RandomForestRegressor**: A RandomForestRegressor model is then trained using the top 3 selected features.  It is a baseline model that leverages [ensemble learning](https://www.ibm.com/topics/ensemble-learning#:~:text=Ensemble%20learning%20is%20a%20machine,than%20a%20single%20model%20alone.) to predict the sound pressure level. 
 - **Performance Evaluation**: Model performance is evaluated using mean squared error (MSE) as the primary metric, providing a clear understanding of each model's accuracy.
+
+- **Hyperparameter Tuning**: The parameter grid was defined for the model with the necessary hyperparamters which are tuned with [GridSearchCV](https://scikit-learn.org/1.6/modules/generated/sklearn.model_selection.GridSearchCV.html). 
+
+- **Benchmarking**: Different models are used and their performance benchmarked against each other to determine the optimal model for the project.
+
 
 
 ### Project Structure
@@ -77,4 +87,18 @@ python scripts/predict.py
 ```
 
 This script loads the trained model from the [`./models/trained_model.pkl`](./models/trained_model.pkl), accepts new input data, and prints the predicted SPL.
+
+
+
+#### 5. Hyperparameter Tuning ([`hyperparameter_tuning.py`](./scripts/hyperparams_tuning.py))
+Run the script to see how hyperparameter optimization works:
+```bash
+python scripts/hyperparameter_tuning.py
+```
+
+#### 5. Benchmarking ([`benchmarked_models.py`](./scripts/benchmarked_models.py))
+This script allows you to compare the performance of all the models used in the project:
+```bash
+python scripts/benchmarked_models.py
+```
 
