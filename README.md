@@ -1,5 +1,9 @@
 # AirfoilOptimizer: Self-Noise Prediction
 
+
+
+![Airplane wing photo by Pixabay on Perxels](https://github.com/user-attachments/assets/55a04feb-34b1-43dc-b191-9329914ee0b0)
+
 ## Project Overview
 This project aims to predict the sound pressure level of an airplane airfoil self-noise using machine learning models. The dataset used for this project, stored in [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) sourced from aerodynamic studies on NACA 0012 airfoil, consists of key features related to airfoil characteristics, such as frequency, angle of attack, chord length, and suction side displacement. 
 
